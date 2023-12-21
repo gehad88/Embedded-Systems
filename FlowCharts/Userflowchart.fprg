@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Gehad"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-12-22 01:04:45 AM"/>
+        <attribute name="created" value="R2VoYWQ7R0VIQUQtT01BUjsyMDIzLTEyLTE0OzEwOjE4OjMwIEFNOzI0MjM="/>
+        <attribute name="edited" value="R2VoYWQ7R0VIQUQtT01BUjsyMDIzLTEyLTIyOzAxOjA0OjQ1IEFNOzc7MjUzNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <while expression="">
+                <declare name="ID, PC, NewPC" type="Integer" array="False" size=""/>
+                <declare name="Button" type="String" array="False" size=""/>
+                <input variable="Button"/>
+                <if expression="Button = &quot;*&quot;">
+                    <then>
+                        <output expression="&quot;Enter your Id : &quot;" newline="True"/>
+                        <input variable="ID"/>
+                        <if expression="ID = &quot;Any Stored ID in EEPROM&quot;">
+                            <then>
+                                <output expression="&quot;Enter your PC : &quot;" newline="True"/>
+                                <input variable="PC"/>
+                                <if expression="PC = &quot;The stored Password for this specific ID&quot;">
+                                    <then>
+                                        <output expression="&quot;Welcome , UserName&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Sorry , wrong PC . + Peep&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                                <output expression="PC" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Wrong ID + 2 peep&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="Button = &quot;SET PC&quot;">
+                            <then>
+                                <output expression="&quot;Enter new PC : &quot;" newline="True"/>
+                                <input variable="PC"/>
+                                <output expression="&quot;Renter new PC : &quot;" newline="True"/>
+                                <input variable="NewPC"/>
+                                <if expression="PC = NewPC">
+                                    <then>
+                                        <assign variable="PC" expression="NewPC"/>
+                                        <output expression="&quot;New PC sotred&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Contact Admin. + 2 Peep&quot;" newline="True"/>
+                                        <breakpoint expression="" always="True"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <breakpoint expression="" always="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

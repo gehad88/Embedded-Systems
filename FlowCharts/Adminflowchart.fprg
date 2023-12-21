@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Gehad"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-12-22 01:05:31 AM"/>
+        <attribute name="created" value="R2VoYWQ7R0VIQUQtT01BUjsyMDIzLTEyLTE0OzExOjAxOjQ4IEFNOzI0MjU="/>
+        <attribute name="edited" value="R2VoYWQ7R0VIQUQtT01BUjsyMDIzLTEyLTIyOzEyOjU2OjE2IEFNOzI7MjUzOQ=="/>
+        <attribute name="edited" value="SVRDO0RFU0tUT1AtNlM4N0s4TTsyMDIzLTEyLTIyOzAxOjA1OjMxIEFNOzQ7MjYyNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="adminPC" type="Integer" array="False" size=""/>
+            <declare name="AdminButton" type="Boolean" array="False" size=""/>
+            <input variable="AdminButton"/>
+            <if expression="AdminButton = true">
+                <then>
+                    <output expression="&quot;Enter Admin PC : &quot;" newline="True"/>
+                    <input variable="adminPC"/>
+                    <if expression="adminPC">
+                        <then>
+                            <declare name="newPC, reNewPC, userID" type="Integer" array="False" size=""/>
+                            <output expression="&quot;Enter User ID : &quot;" newline="True"/>
+                            <input variable="userID"/>
+                            <if expression="stdID = &quot;user ID&quot;">
+                                <then>
+                                    <output expression="&quot;Enter his new PC : &quot;" newline="True"/>
+                                    <input variable="newPC"/>
+                                    <output expression="&quot;ReEnter his new PC : &quot;" newline="True"/>
+                                    <input variable="reNewPC"/>
+                                    <if expression="newPc = reNewPC">
+                                        <then>
+                                            <output expression="&quot;PC is stored&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Contact Admin&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Contact Admin.&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Contact Admin.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
